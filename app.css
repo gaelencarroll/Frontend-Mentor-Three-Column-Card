@@ -1,0 +1,135 @@
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --pgraph-color: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    --title-font: 'Big Shoulders Display', cursive;
+    --paragraph-font: 'Lexend Deca', sans-serif;
+}
+
+body{
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.three-col-card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+
+.section{
+    width: 200px;
+    padding: 50px;
+}
+
+.icon{
+    width: 75px;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.header{
+    font-family: var(--title-font);
+    color: var(--very-light-gray);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.pgraph{
+    font-family: var(--paragraph-font);
+    color: var(--pgraph-color);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.btn{
+    background-color: var(--very-light-gray);
+    padding: 15px;
+    border-radius: 30px;
+    font-family: var(--paragraph-font);
+    border: 2px solid transparent;
+    width: 150px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+.btn:hover{
+    border: 2px solid var(--very-light-gray);
+    cursor: pointer;
+}
+
+/* SEDANS */
+.section.sedans{
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.icon.sedans{
+    background-image: url(./images/icon-sedans.svg);
+}
+
+.btn.sedans{
+    color: var(--bright-orange);
+}
+.btn.sedans:hover{
+    color: var(--very-light-gray);
+    background-color: var(--bright-orange);
+}
+
+/* SUVS */
+.section.SUVs{
+    background-color: var(--dark-cyan);
+}
+
+.icon.SUVs{
+    background-image: url(./images/icon-suvs.svg);
+}
+
+.btn.SUVs{
+    color: var(--dark-cyan);
+}
+.btn.SUVs:hover{
+    color: var(--very-light-gray);
+    background-color: var(--dark-cyan);
+}
+
+/* LUXURY */
+.section.luxury{
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.icon.luxury{
+    background-image: url(./images/icon-luxury.svg);
+}
+.btn.luxury{
+    color: var(--very-dark-cyan);
+}
+.btn.luxury:hover{
+    color: var(--very-light-gray);
+    background-color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 375px){
+    .three-col-card{
+        flex-direction: column;
+    }
+
+    .section.sedans{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .section.luxury{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+    }
+}
